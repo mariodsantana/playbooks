@@ -1,5 +1,5 @@
 """
-This is a plyabook for performing who-is lookups on IPs in incidents.
+This is a playbook for performing who-is lookups on IPs in incidents.
 """
 import json
 import phantom.rules as phantom
@@ -16,7 +16,7 @@ def on_start(incident):
     return
 
 def whois_cb(action, success, incident, results, handle):
-    phantom.debug('Action '+action+ (' SUCCEEDED' if success else ' FAILED'))
+    phantom.debug('Action: {0} {1}'.format(action['action_name'], (' SUCCEEDED' if success else ' FAILED')))
     if not success:
         return
 
