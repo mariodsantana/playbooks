@@ -49,7 +49,7 @@ def file_reputation_cb(action, success, incident, results, handle):
 
 def on_start(incident):
 
-    phantom.act('file reputation', parameters=[{ "hash" : "7896b9b34bdbedbe7bdc6d446ecb09d5"}], callback=file_reputation_cb)
+    phantom.act('file reputation', parameters=[{ "hash" : "7896b9b34bdbedbe7bdc6d446ecb09d5"}, {"hash": "99017f6eebbac24f351415dd410d522d"}], assets=["virustotal_private"], callback=file_reputation_cb)
 
     return
 
